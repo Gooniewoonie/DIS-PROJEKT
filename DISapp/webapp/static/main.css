@@ -1,72 +1,88 @@
+/* General Styles */
 body {
     background: #fafafa;
     color: #333333;
     margin-top: 5rem;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #444444;
+    color: #006400; /* Dark green for headings */
+    margin-bottom: 1rem;
 }
 
+/* Navbar Styles */
 .bg-steel {
-    background-color: #5f788a;
+    background-color: #006400; /* Dark green background for navbar */
 }
 
 .site-header .navbar-nav .nav-link {
-    color: #cbd5db;
+    color: #000000; /* Black text for navbar links */
+    transition: color 0.3s ease;
 }
 
 .site-header .navbar-nav .nav-link:hover {
-    color: #ffffff;
+    color: #ffffff; /* White text on hover */
 }
 
 .site-header .navbar-nav .nav-link.active {
     font-weight: 500;
+    color: #ffffff; /* White text for active link */
 }
 
 .site-header .dropdown-menu > li > .nav-item.nav-link {
-    color: #495057;
+    color: #000000; /* Black text for dropdown links */
 }
 
 .site-header .dropdown-menu > li > .nav-item.nav-link:hover {
-    color: #798592;
+    color: #006400; /* Dark green text on hover for dropdown links */
 }
 
+/* Content Section Styles */
 .content-section {
     background: #ffffff;
-    padding: 10px 20px;
+    padding: 20px 30px;
     border: 1px solid #dddddd;
-    border-radius: 3px;
-    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
 }
 
+/* Article Styles */
 .article-title {
-    color: #444444;
+    color: #006400; /* Dark green for article titles */
+    font-weight: 700;
+    font-size: 1.5rem;
 }
 
 a.article-title:hover {
-    color: #428bca;
+    color: #32CD32; /* Lighter green on hover */
     text-decoration: none;
 }
 
 .article-content {
     white-space: pre-line;
+    margin-top: 10px;
 }
 
 .article-img {
-    height: 65px;
-    width: 65px;
+    height: 75px;
+    width: 75px;
     margin-right: 16px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .article-metadata {
-    padding-bottom: 1px;
-    margin-bottom: 4px;
-    border-bottom: 1px solid #e3e3e3
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e3e3e3;
+    font-size: 0.9rem;
+    color: #888888;
 }
 
 .article-metadata a:hover {
-    color: #333;
+    color: #333333; /* Dark grey on hover */
     text-decoration: none;
 }
 
@@ -76,13 +92,58 @@ a.article-title:hover {
     vertical-align: middle;
 }
 
+/* Account Styles */
 .account-img {
     height: 125px;
     width: 125px;
     margin-right: 20px;
     margin-bottom: 16px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .account-heading {
     font-size: 2.5rem;
+    font-weight: 700;
+    color: #006400; /* Dark green for account heading */
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #000000; /* Black background for footer */
+    padding: 20px 0;
+    border-top: 1px solid #e3e3e3;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .text-muted {
+    color: #ffffff; /* White text for footer */
+    font-size: 0.9rem;
+}
+
+/* Button Styles */
+.btn-outline-info {
+    color: #006400; /* Dark green text for buttons */
+    border-color: #006400; /* Dark green border for buttons */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-info:hover {
+    background-color: #006400; /* Dark green background on hover */
+    color: #ffffff; /* White text on hover */
+}
+
+/* Additional styles for the leaderboard page */
+.list-group-item {
+    font-size: 1.2rem;
+    color: #333333;
+    background: #f9f9f9;
+    margin-bottom: 0.5rem;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
 }

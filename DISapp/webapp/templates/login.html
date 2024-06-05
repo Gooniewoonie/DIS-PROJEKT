@@ -6,16 +6,16 @@
             <fieldset class="form-group">
                 <legend class="border-bottom mb-4">Log In</legend>
                 <div class="form-group">
-                    {{ form.id.label(class="form-control-label") }}
-                    {% if form.id.errors %}
-                        {{ form.id(class="form-control form-control-lg is-invalid") }}
+                    {{ form.username.label(class="form-control-label") }}
+                    {% if form.username.errors %}
+                        {{ form.username(class="form-control form-control-lg is-invalid") }}
                         <div class="invalid-feedback">
-                            {% for error in form.id.errors %}
+                            {% for error in form.username.errors %}
                                 <span>{{ error }}</span>
                             {% endfor %}
                         </div>
                     {% else %}
-                        {{ form.id(class="form-control form-control-lg") }}
+                        {{ form.username(class="form-control form-control-lg") }}
                     {% endif %}
                 </div>
                 <div class="form-group">
@@ -43,16 +43,8 @@
                 <a href="#">Forgot Password?</a>
             </small>
             <small class="text-muted ml-2">
-                {% if is_employee %}
-                    <a href="/login?is_employee=false">Customer login?</a>
-                {% else %}
-                    <a href="/login?is_employee=true">Employee login?</a>
-                {%  endif %}
-                <a href="/direct?is_employee=false">Direct Customer login</a>
-             </small>
+                <a href="{{ url_for('Login.register') }}">Don't have an account? Register</a>
+            </small>
         </form>
-
     </div>
-
-
-{% endblock content %}
+{% endblock %}
