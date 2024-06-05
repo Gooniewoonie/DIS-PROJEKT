@@ -20,7 +20,7 @@ conn = psycopg2.connect(
 bcrypt = Bcrypt(app)
 
 login_manager = LoginManager(app)
-login_manager.login_view = 'login'
+login_manager.login_view = 'Login.login'
 login_manager.login_message_category = 'info'
 
 roles = ["admin","free-user", "bronze-user", "silver-user","gold-user"]

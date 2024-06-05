@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section text-center">
+        <h1>Song Recommender</h1>
+        <p>Select your current mood to get song recommendations:</p>
+        <div class="btn-group" role="group" aria-label="Mood buttons">
+            <a href="{{ url_for('Login.recommend_songs', mood='tired') }}" class="btn btn-outline-secondary btn-lg">Tired</a>
+            <a href="{{ url_for('Login.recommend_songs', mood='calm') }}" class="btn btn-outline-secondary btn-lg">Calm</a>
+            <a href="{{ url_for('Login.recommend_songs', mood='neutral') }}" class="btn btn-outline-secondary btn-lg">Normal</a>
+            <a href="{{ url_for('Login.recommend_songs', mood='energetic') }}" class="btn btn-outline-secondary btn-lg">Energetic</a>
+            <a href="{{ url_for('Login.recommend_songs', mood='very Energetic') }}" class="btn btn-outline-secondary btn-lg">Zoomies</a>
+        </div>
+        {% if songs %}
+            <hr>
+            <h2>Recommended Songs for {{ mood }}</h2>
+            <ul class="list-group">
+                {% for song in songs %}
+                    <li class="list-group-item">
+                        <strong>{{ song.track_name }}</strong> by {{ song.artist_name }} from the album {{ song.album_name }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+{% endblock %}
