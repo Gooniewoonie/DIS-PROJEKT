@@ -1,0 +1,146 @@
+
+body {
+    background: #f0f0f0;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 5rem;
+    transition: all 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #444;
+    font-family: 'Montserrat', sans-serif;
+    transition: color 0.3s ease;
+}
+
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
+    color: #28a745;
+}
+
+.bg-steel {
+    background: linear-gradient(45deg, #6b8e23, #28a745);
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #d4edda;
+}
+
+.navbar-nav .nav-link.active {
+    font-weight: 700;
+    color: #d4edda;
+}
+
+.content-section {
+    background: #fff;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.content-section:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.article-title {
+    color: #007bff;
+    font-size: 1.75rem;
+    transition: color 0.3s ease;
+}
+
+.article-title:hover {
+    color: #0056b3;
+}
+
+.article-content {
+    white-space: pre-line;
+    margin-top: 10px;
+}
+
+.article-metadata {
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e3e3e3;
+    color: #6c757d;
+}
+
+.account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+    border-radius: 50%;
+    border: 2px solid #28a745;
+}
+
+.account-heading {
+    font-size: 2.5rem;
+}
+
+.btn-lg {
+    padding: 15px 30px;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-outline-secondary {
+    border-color: #28a745;
+    color: #28a745;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #28a745;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.btn-outline-success {
+    border-color: #28a745;
+    color: #28a745;
+}
+
+.btn-outline-success:hover {
+    background-color: #28a745;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.list-group-item {
+    padding: 15px;
+    font-size: 1.1rem;
+}
+
+.footer {
+    background: #343a40;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.footer:hover {
+    background: #23272b;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.content-section, .article-title, .account-heading {
+    animation: fadeIn 1s ease-in;
+}
+
+
